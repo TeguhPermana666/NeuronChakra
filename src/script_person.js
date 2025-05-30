@@ -105,7 +105,7 @@ function validateName(name) {
   const nameValide = new RegExp("^[а-яё\\- ]*[a-z\\- ]*$", "i");
   
   if (!nameValide.test(name)) {
-    return `<p>Name format is incorrect: allowed characters are letters, dash and space. Example: Anna, Anna-Maria, Anna Maria.</p>`;
+    return `<p>Format nama kurang tepat, hanya karakter, spasi, dan - yang diperbolehkan</p>`;
   }
   return true;
 }
@@ -114,16 +114,16 @@ function validateDate(date) {
   let errorMessage = '';
   
   if(date === 'Invalid Date' || isNaN(date.getFullYear())){
-    errorMessage += `<p>Date is not valid.</p>`;
+    errorMessage += `<p>tanggal tidak valid.</p>`;
   }
 
   let today = new Date();
   if (date > today) {
-    errorMessage += `<p>Date can't be in the future.</p>`;
+    errorMessage += `<p>Tanggal ada di masa depan</p>`;
   }
 
   if (today.getFullYear() - date.getFullYear() > 120) {
-    errorMessage += `<p>Date can't be so far in the past.</p>`;
+    errorMessage += `<p>Hanya bisa menghitung sampai 120 tahun ke belakang</p>`;
   }
 
   if (errorMessage !== '') return errorMessage;
