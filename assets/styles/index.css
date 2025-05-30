@@ -102,11 +102,10 @@ li {
 .birthday-container__inputs-wrapper {
   width: 83%;
   margin-top: 3.1875em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "input1 input2 button";
-  grid-gap: 1.875em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875em;
 }
 
 .birthday-container__inputs-wrapper-comp {
@@ -144,22 +143,25 @@ label {
 .input1-wrap,
 .input2-wrap {
   position: relative;
+  width: 100%;
+  max-width: 300px;
 }
 
 .input1-wrap {
-  grid-area: input1;
+  transition: all 0.3s ease-in-out;
 }
 
 #date,
 #name,
 #date_person1,
 #date_person2 {
-  width: 8.55em;
+  width: 100%;
   height: 1.25em;
+  box-sizing: border-box;
 }
 
 .input2-wrap {
-  grid-area: input2;
+  transition: all 0.3s ease-in-out;
 }
 
 input {
@@ -198,9 +200,11 @@ button:hover {
 
 #get_the_answer,
 #createChart {
-  grid-area: button;
-  align-self: baseline;
+  align-self: center;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  max-width: 300px;
+  width: 100%;
 }
 
 .star__wrap1 {
@@ -1119,15 +1123,10 @@ h3 {
   .birthday-container__inputs-wrapper {
     width: 100%;
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "input1"
-      "input2"
-      "button";
-    grid-gap: 10px;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .birthday-container__inputs-wrapper-comp {
@@ -1319,5 +1318,49 @@ h3 {
 
   .socialmedia-wrapper_second .socialmedia-item img {
     max-width: 22px;
+  }
+}
+
+/* Progressive form animations */
+.input1-wrap,
+.input2-wrap,
+#get_the_answer {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.input1-wrap {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.input1-wrap[style*="display: block"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#get_the_answer {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#get_the_answer[style*="display: block"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ensure smooth appearance */
+.input1-wrap[style*="display: block"],
+#get_the_answer[style*="display: block"] {
+  animation: fadeInUp 0.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
