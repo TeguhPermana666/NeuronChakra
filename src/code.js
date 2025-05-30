@@ -191,7 +191,7 @@ const calculatePoints = (aPoint, bPoint, cPoint) => {
   h2point = reduceNumber(hpoint + upoint);
   h1point = reduceNumber(hpoint + h2point);
 
-  // года
+  // years
 
   afpoint = reduceNumber(aPoint + fpoint);
   af1point = reduceNumber(aPoint + afpoint);
@@ -392,7 +392,7 @@ const calculatePoints = (aPoint, bPoint, cPoint) => {
   };
 };
 
-// очищает инпуты
+// clears inputs
 function clearInputs(firtsInput, secondInput) {
   firtsInput.value = "";
   secondInput.value = "";
@@ -404,7 +404,7 @@ function outputYears(obj){
   }
 }
 
-// Кнопка GET YOUR FULL DESTINY MATRIX READING
+// GET YOUR FULL DESTINY MATRIX READING button
 const decodematrixbtn = document.querySelector("#decode-matrix-btn");
 decodematrixbtn.addEventListener("click", function () {
   window.location.href = "http://krisuniverse.com/rates";

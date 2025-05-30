@@ -6,14 +6,14 @@ container.classList.add('display-none');
 
 const btnAnswer = document.getElementById('get_the_answer');
 
-// ставит ограничитель в календаре на даты, которые не наступили
+// sets calendar limiter for dates that haven't occurred yet
 let today = new Date();
 document.getElementById('date').setAttribute("max", today.toLocaleDateString("en-CA"));
-// ставит ограничитель в календаре на даты, которые были раньше 120 лет назад
+// sets calendar limiter for dates that were earlier than 120 years ago
 let ancientDate = new Date(today.getFullYear() - 120, today.getMonth(), today.getDay());
 document.getElementById('date').setAttribute("min", ancientDate.toLocaleDateString("en-CA"));
 
-// значение инпутов по умолчанию для перезагрузки страницы, пока выдает ошибку
+// default input values for page reload, currently throwing an error
 dateInput.value = '';
 nameInput.value = '';
 
@@ -23,7 +23,7 @@ let purposes = {};
 let chartHeart = {};
 let years = {};
 
-//одна универсальная функция для каждой персоны
+// one universal function for each person
 function createPerson(per, apoint, bpoint, cpoint) {
   calculatePoints(apoint, bpoint, cpoint);
   per.points = points;
@@ -76,7 +76,7 @@ btnAnswer.addEventListener('click', (evt) => {
 });
 
 function valide(date, name) {
-  /* проверка имени. Имя может содержать только буквы, тире или писаться через пробел (если несколько имён) */
+  /* name validation. Name can contain only letters, dash, or be written with space (if multiple names) */
   let errorMessage = '';
   const nameValide = new RegExp("^[а-яё\\- ]*[a-z\\- ]*$", "i");
 
@@ -97,7 +97,7 @@ function valide(date, name) {
     errorMessage += `<p>Date can't be so far in the past.</p>`;
   }
 
-  // ставит ограничитель в календаре на даты, которые были раньше 120 лет назад
+  // sets calendar limiter for dates that were earlier than 120 years ago
   let ancientDate = new Date(today.getFullYear() - 120, today.getMonth(), today.getDay());
   document.getElementById('date').setAttribute("min", ancientDate.toLocaleDateString("en-CA"));
 

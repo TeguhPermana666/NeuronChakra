@@ -3,9 +3,9 @@ input[type="date"] {
 }
 
 body {
-  background-color: #050215;
-  font-family: "GFS Didot";
-  color: #ffffff;
+  background-color: #5C7285;
+  font-family: "Didact Gothic";
+  color: #E2E0C8;
   font-style: normal;
   font-size: 1vw;
 }
@@ -28,7 +28,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Inter", sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 1.25em;
   text-transform: uppercase;
 }
@@ -65,18 +65,18 @@ footer {
 
 .footer p {
   font-size: 3em;
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   text-transform: uppercase;
   margin-top: 0;
 }
 
 a {
   text-decoration: none;
-  /* убираем линию подчеркивания */
+  /* removes underline */
   color: inherit;
-  /* цвет ссылки равен цвету текста */
+  /* link color equals text color */
   outline: none;
-  /* убираем подсветку при фокусировке */
+  /* removes highlighting when focused */
   cursor: pointer;
 }
 
@@ -90,7 +90,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   margin-bottom: 5em;
 }
 
@@ -164,7 +164,7 @@ label {
 
 input {
   padding: 1.25em 3.25em 1.25em 3.25em;
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   font-size: 1.25em;
   background-color: #050215;
   color: #fff8db;
@@ -179,7 +179,7 @@ input {
 button {
   padding: 1.25em 2em 1.25em 2em;
   background-color: #fff8db;
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   font-size: 1.25em;
   line-height: 125%;
   text-transform: uppercase;
@@ -349,7 +349,7 @@ button:hover {
 }
 
 #circle-sahastrara:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "7";
   width: 1.25em;
@@ -363,7 +363,7 @@ button:hover {
 }
 
 #circle-ajna:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "6";
   width: 1.25em;
@@ -377,7 +377,7 @@ button:hover {
 }
 
 #circle-vishuddha:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "5";
   width: 1.25em;
@@ -392,7 +392,7 @@ button:hover {
 }
 
 #circle-anahata:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "4";
   width: 1.25em;
@@ -407,7 +407,7 @@ button:hover {
 }
 
 #circle-manipura:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "3";
   width: 1.25em;
@@ -422,7 +422,7 @@ button:hover {
 }
 
 #circle-svadhishtana:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "2";
   width: 1.25em;
@@ -437,7 +437,7 @@ button:hover {
 }
 
 #circle-muladhara:before {
-  font-family: "GFS Didot";
+  font-family: "Didact Gothic";
   font-size: 1.375em;
   content: "1";
   width: 1.25em;
@@ -459,7 +459,7 @@ button:hover {
 }
 
 .chakra-tr {
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   /* size: 20px; */
   text-align-last: center;
   padding: 0.3125em;
@@ -507,7 +507,7 @@ button:hover {
 }
 
 .chakra-table-header {
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   /* size: 20px; */
   text-transform: uppercase;
 }
@@ -582,7 +582,7 @@ button:hover {
 .output2 {
   text-align: center;
   font-size: 1.25em;
-  font-family: Inter;
+  font-family: "Didact Gothic";
 }
 
 .gray {
@@ -854,7 +854,7 @@ text {
 /* health-map and purposes table styles */
 
 tbody {
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   font-size: 1.25em;
 }
 
@@ -863,7 +863,7 @@ tr {
 }
 
 .font-size16 {
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   font-size: 1em;
 }
 
@@ -876,7 +876,7 @@ tr {
 }
 
 .font-size18 {
-  font-family: "Inter";
+  font-family: "Didact Gothic";
   font-size: 1.125em;
 }
 
@@ -1005,7 +1005,7 @@ h3 {
   .logo {
     display: block;
     margin-bottom: 10px;
-    font-family: 'GFS Didot', Arial, sans-serif;
+    font-family: 'Didact Gothic', Arial, sans-serif;
     font-size: 22px;
     font-weight: 600;
   }
