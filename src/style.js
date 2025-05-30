@@ -1,8 +1,8 @@
-// проверка на сафари
+// check for Safari
 const isSafari = navigator.userAgent.indexOf("Safari") > -1;
-// проверка на айфон и айпад
+// check for iPhone and iPad
 const isIphoneOrIpad = navigator.userAgent.match(/iPhone|iPad|iPod/i);
-// проверка на хром
+// check for Chrome
 const isChrome = navigator.userAgent.indexOf("Chrome") > -1;
 
 const bigCircle = document.querySelectorAll('.big-circle');
