@@ -1,4 +1,5 @@
 const dateInput = document.getElementById("date");
+const genderInput = document.getElementById("gender");
 const nameInput = document.getElementById("name");
 const btnAnswer = document.getElementById('get_the_answer');
 const container = document.querySelector('.matrix-container');
@@ -17,6 +18,7 @@ document.getElementById('date').setAttribute("min", ancientDate.toLocaleDateStri
 // default input values for page reload
 dateInput.value = '';
 nameInput.value = '';
+genderInput.value = '';
 
 let person = {};
 let points = {};
@@ -24,43 +26,17 @@ let purposes = {};
 let chartHeart = {};
 let years = {};
 
-// Progressive form logic
-nameInput.addEventListener('input', function() {
-  const name = this.value.trim();
-  errorOutput.innerHTML = '';
-  
-  if (name.length > 0) {
-    // Validate name format
-    const nameValid = validateName(name);
-    
-    if (nameValid === true) {
-      // Show date input if name is valid
-      showDateInput();
-    } else {
-      // Hide date input and button if name is invalid
-      hideDateInput();
-      hideButton();
-      errorOutput.innerHTML = nameValid;
-    }
-  } else {
-    // Hide date input and button if name is empty
-    hideDateInput();
-    hideButton();
-  }
-});
-
-dateInput.addEventListener('input', function() {
-  const date = new Date(this.value);
+genderInput.addEventListener('change', function() {
+  const date = new Date(dateInput.value);
   const name = nameInput.value.trim();
+  const gender = this.value;
   errorOutput.innerHTML = '';
   
-  if (this.value && name) {
-    // Validate both name and date
+  if (dateInput.value && name && gender) {
     const nameValid = validateName(name);
     const dateValid = validateDate(date);
     
     if (nameValid === true && dateValid === true) {
-      // Show button if both are valid
       showButton();
     } else {
       // Hide button if either is invalid
@@ -75,18 +51,6 @@ dateInput.addEventListener('input', function() {
     hideButton();
   }
 });
-
-function showDateInput() {
-  dateWrapper.style.display = 'block';
-  setTimeout(() => {
-    dateWrapper.style.opacity = '1';
-  }, 10);
-}
-
-function hideDateInput() {
-  dateWrapper.style.display = 'none';
-  dateWrapper.style.opacity = '0';
-}
 
 function showButton() {
   btnAnswer.style.display = 'block';
