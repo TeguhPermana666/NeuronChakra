@@ -4,7 +4,7 @@ input[type="date"] {
 
 body {
   background-color: #5C7285;
-  font-family: "Didact Gothic";
+  font-family: Arial, sans-serif;
   color: #E2E0C8;
   font-style: normal;
   font-size: 1vw;
@@ -23,12 +23,17 @@ footer {
   padding-right: 12.9em;
 }
 
+.big-circle, .small-circle, .medium-circle {
+  fill:none;
+  stroke: black;
+}
+
 .header {
   padding: 1.875em 0 1.875em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Didact Gothic", sans-serif;
+  /* font-family: "Didact Gothic", sans-serif; */
   font-size: 1.25em;
   text-transform: uppercase;
 }
@@ -65,7 +70,7 @@ footer {
 
 .footer p {
   font-size: 3em;
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   text-transform: uppercase;
   margin-top: 0;
 }
@@ -90,7 +95,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   margin-bottom: 5em;
 }
 
@@ -166,7 +171,7 @@ label {
 
 input {
   padding: 1.25em 3.25em 1.25em 3.25em;
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.25em;
   background-color: #050215;
   color: #fff8db;
@@ -181,7 +186,7 @@ input {
 button {
   padding: 1.25em 2em 1.25em 2em;
   background-color: #fff8db;
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.25em;
   line-height: 125%;
   text-transform: uppercase;
@@ -353,35 +358,35 @@ button:hover {
 }
 
 #circle-sahastrara:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "7";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
   display: inline-flex;
-  background: #b653f7;
+  background: #8C45A5;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #b653f7;
+  box-shadow: 0 0 0.625em 0.625em #8C45A5;
 }
 
 #circle-ajna:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "6";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
   display: inline-flex;
-  background: #3d54f5;
+  background: #526DF8;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #3d54f5;
+  box-shadow: 0 0 0.625em 0.625em #526DF8;
 }
 
 #circle-vishuddha:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "5";
   width: 1.25em;
@@ -389,14 +394,14 @@ button:hover {
   height: 1.25em;
   display: inline-flex;
   color: #000000;
-  background: #74e0f8;
+  background: #4ACEDD;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #74e0f8;
+  box-shadow: 0 0 0.625em 0.625em #4ACEDD;
 }
 
 #circle-anahata:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "4";
   width: 1.25em;
@@ -404,14 +409,14 @@ button:hover {
   height: 1.25em;
   display: inline-flex;
   color: #000000;
-  background: #b6fd57;
+  background: #ADDF62;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #b6fd57;
+  box-shadow: 0 0 0.625em 0.625em #ADDF62;
 }
 
 #circle-manipura:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "3";
   width: 1.25em;
@@ -419,14 +424,14 @@ button:hover {
   height: 1.25em;
   display: inline-flex;
   color: #000000;
-  background: #fbe49d;
+  background: #FFAE31;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #fbe49d;
+  box-shadow: 0 0 0.625em 0.625em #FFAE31;
 }
 
 #circle-svadhishtana:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "2";
   width: 1.25em;
@@ -434,14 +439,14 @@ button:hover {
   height: 1.25em;
   display: inline-flex;
   color: #f5f5f5;
-  background: #ed7233;
+  background: #FFAE31;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #ed7233;
+  box-shadow: 0 0 0.625em 0.625em #FFAE31;
 }
 
 #circle-muladhara:before {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
   content: "1";
   width: 1.25em;
@@ -449,10 +454,10 @@ button:hover {
   height: 1.25em;
   display: inline-flex;
   color: #f5f5f5;
-  background: #ea4631;
+  background: #EF4142;
   justify-content: center;
   margin-right: 1.25em;
-  box-shadow: 0 0 0.625em 0.625em #ea4631;
+  box-shadow: 0 0 0.625em 0.625em #EF4142;
 }
 
 .chakra-td {
@@ -463,7 +468,7 @@ button:hover {
 }
 
 .chakra-tr {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   /* size: 20px; */
   text-align-last: center;
   padding: 0.3125em;
@@ -511,7 +516,7 @@ button:hover {
 }
 
 .chakra-table-header {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   /* size: 20px; */
   text-transform: uppercase;
 }
@@ -586,7 +591,7 @@ button:hover {
 .output2 {
   text-align: center;
   font-size: 1.25em;
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
 }
 
 .gray {
@@ -686,8 +691,9 @@ text {
 }
 
 .cls-4 {
-  stroke-dasharray: 0, 49, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
-    41;
+  /* stroke-dasharray: 0, 49, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+    41; */
+    stroke-dasharray: none;
 }
 
 .cls-3,
@@ -753,7 +759,7 @@ text {
   fill: #b6fd57;
 }
 
-.cls-15,
+/* .cls-15,
 .cls-21,
 .cls-22,
 .cls-26 {
@@ -770,7 +776,7 @@ text {
 .cls-24,
 .cls-25 {
   filter: blur(5px);
-}
+} */
 
 .cls-24,
 .cls-21,
@@ -858,7 +864,7 @@ text {
 /* health-map and purposes table styles */
 
 tbody {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.25em;
 }
 
@@ -866,8 +872,12 @@ tr {
   text-align: center;
 }
 
+td {
+  width: 6rem;
+}
+
 .font-size16 {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1em;
 }
 
@@ -880,13 +890,16 @@ tr {
 }
 
 .font-size18 {
-  font-family: "Didact Gothic";
+  /* font-family: "Didact Gothic"; */
   font-size: 1.125em;
 }
 
 #purposes {
   /* font-size: 70%; */
   margin-bottom: 1.25em;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
 }
 
 #blom {
@@ -1009,7 +1022,7 @@ h3 {
   .logo {
     display: block;
     margin-bottom: 10px;
-    font-family: 'Didact Gothic', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 22px;
     font-weight: 600;
   }
