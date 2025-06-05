@@ -28,6 +28,7 @@ footer {
   stroke: black;
 }
 
+
 .header {
   padding: 1.875em 0 1.875em 0;
   display: flex;
@@ -146,13 +147,19 @@ label {
 }
 
 .input1-wrap,
-.input2-wrap {
+.input2-wrap,
+.gender-wrap {
   position: relative;
   width: 100%;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
 }
 
-.input1-wrap {
+.input1-wrap, 
+.gender-wrap {
   transition: all 0.3s ease-in-out;
 }
 
@@ -169,7 +176,16 @@ label {
   transition: all 0.3s ease-in-out;
 }
 
-input {
+select {
+  padding: 1rem 4.5rem;
+  font-size: 1.1rem;
+  background-color: #050215;
+  color: #fff8db;
+  border: 1px #fff8db solid;
+  border-radius: 0.5em;
+}
+
+input{
   padding: 1.25em 3.25em 1.25em 3.25em;
   /* font-family: "Didact Gothic"; */
   font-size: 1.25em;
@@ -309,7 +325,13 @@ button:hover {
   border-radius: 10px;
   width: 100%;
   max-width: 50em;
+  margin-bottom: 3rem;
   display: block;
+}
+
+.info-txt {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .chakra-table td:first-child,
@@ -360,7 +382,7 @@ button:hover {
 #circle-sahastrara:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "7";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
@@ -374,7 +396,7 @@ button:hover {
 #circle-ajna:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "6";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
@@ -388,12 +410,12 @@ button:hover {
 #circle-vishuddha:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "5";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
   display: inline-flex;
-  color: #000000;
+  /* color: #000000; */
   background: #4ACEDD;
   justify-content: center;
   margin-right: 1.25em;
@@ -403,12 +425,12 @@ button:hover {
 #circle-anahata:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "4";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
   display: inline-flex;
-  color: #000000;
+  /* color: #000000; */
   background: #ADDF62;
   justify-content: center;
   margin-right: 1.25em;
@@ -418,12 +440,12 @@ button:hover {
 #circle-manipura:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "3";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
   display: inline-flex;
-  color: #000000;
+  /* color: #000000; */
   background: #FFAE31;
   justify-content: center;
   margin-right: 1.25em;
@@ -433,12 +455,12 @@ button:hover {
 #circle-svadhishtana:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "2";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
   display: inline-flex;
-  color: #f5f5f5;
+  /* color: #f5f5f5; */
   background: #FFAE31;
   justify-content: center;
   margin-right: 1.25em;
@@ -448,7 +470,7 @@ button:hover {
 #circle-muladhara:before {
   /* font-family: "Didact Gothic"; */
   font-size: 1.375em;
-  content: "1";
+  content: "";
   width: 1.25em;
   border-radius: calc(50%);
   height: 1.25em;
@@ -677,6 +699,11 @@ button:hover {
   min-width: 300px;
 }
 
+.big-circle {
+  z-index: 20;
+
+}
+
 :not(svg) {
   transform-origin: 0px 0px;
 }
@@ -752,7 +779,7 @@ text {
 }
 
 .cls-25 {
-  fill: #fbe49d;
+  fill: #ebdc00;
 }
 
 .cls-26 {
@@ -811,7 +838,7 @@ text {
 }
 
 .cls-44 {
-  font-size: 11.5587px;
+  font-size: 10px;
   line-height: 81.9%;
 }
 
@@ -1337,13 +1364,9 @@ h3 {
 /* Progressive form animations */
 .input1-wrap,
 .input2-wrap,
+.gender-wrap,
 #get_the_answer {
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.input1-wrap {
-  opacity: 0;
-  transform: translateY(20px);
 }
 
 .input1-wrap[style*="display: block"] {
