@@ -115,21 +115,32 @@ li {
 }
 
 .birthday-container__inputs-wrapper-comp {
-  width: 83%;
+  width: 90%;
   margin-top: 1.6875em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas:
-    "label-partner1 label-partner2 0"
-    "input1 input2 button";
+    "label-partner1 label-partner2"
+    "input1 input2"
+    "label-partner1 label-partner2"
+    "input1 input2"
+    "button button";
   grid-column-gap: 1.875em;
   grid-row-gap: 0.3em;
+  justify-items: center;
+  align-items: center;
+
+}
+
+.input1-wrap, .input2-wrap {
+  width: 100%;
 }
 
 label {
-  padding-left: 1em;
-  font-size: 1em;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 .label-partner1 {
@@ -334,6 +345,23 @@ button:hover {
   margin-bottom: 2rem;
 }
 
+.info-txt td {
+  width: 9rem;
+}
+
+.info-txt .svg-td {
+  width: 1rem;
+}
+
+.td-label {
+  padding-left: 4rem;
+}
+
+.info-txt svg {
+  margin-bottom: 1em;
+}
+
+.info-txt .td-ta
 .chakra-table td:first-child,
 .chakra-table th:first-child {
   border-left: 1px solid white;
@@ -666,7 +694,7 @@ button:hover {
 #decode-matrix-btn {
   max-width: 20em;
   margin-top: 6.5em;
-  margin-bottom: 6.5em;
+  margin-bottom: 1em;
 }
 
 /* Matrix's styles */
@@ -899,9 +927,6 @@ tr {
   text-align: center;
 }
 
-td {
-  width: 6rem;
-}
 
 .font-size16 {
   /* font-family: "Didact Gothic"; */
@@ -913,7 +938,7 @@ td {
 }
 
 .table-padding-top {
-  padding-top: 1.25em;
+  padding-top: 0.5em;
 }
 
 .font-size18 {
@@ -923,19 +948,10 @@ td {
 
 #purposes {
   /* font-size: 70%; */
-  margin-bottom: 1.25em;
-  display: flex;
   justify-content: center;  
   align-items: center;
 }
 
-#blom {
-  padding-right: 6.25em;
-}
-
-#blom2 {
-  padding-right: 6.25em;
-}
 
 .purposes-top {
   margin-top: 5em;
@@ -1169,7 +1185,7 @@ h3 {
     gap: 10px;
   }
 
-  .birthday-container__inputs-wrapper-comp {
+  /* .birthday-container__inputs-wrapper-comp {
     width: 100%;
     margin-top: 40px;
     display: grid;
@@ -1183,7 +1199,7 @@ h3 {
       "button";
     grid-row-gap: 10px;
     justify-items: center;
-  }
+  } */
 
   label {
     font-size: 14px;
@@ -1296,14 +1312,14 @@ h3 {
   .cls-60 {
     font-size: 22px;
   }
-
+/* 
   #blom {
     padding-right: 2.625em;
   }
 
   #blom2 {
     padding-right: 2.625em;
-  }
+  } */
 
   .glow2 {
     position: absolute;
