@@ -33,6 +33,8 @@ function Points(person) {
   document.querySelector('#h2point').textContent = person.points.h2point;
 }
 
+const table_chakra = document.querySelector('#chakra_table');
+
 function ChartHeart() {
   // Physics
   const sahphysics = document.querySelector("#sahphysics");
@@ -114,6 +116,22 @@ function ChartHeart() {
 }
 
 function Purposes() {
+  //male line point
+  const malelinepoint1 = document.querySelector("#malelinepoint1");
+  malelinepoint1.textContent = getMaleLine().fpoint;
+  const malelinepoint2 = document.querySelector("#malelinepoint2");
+  malelinepoint2.textContent = getMaleLine().epoint;
+  const malelinepoint3 = document.querySelector("#malelinepoint3");
+  malelinepoint3.textContent = getMaleLine().ipoint;
+
+  //female line point
+  const femalelinepoint = document.querySelector("#femalelinepoint1");
+  femalelinepoint.textContent = getFemaleLine().gpoint;
+  const femalelinepoint2 = document.querySelector("#femalelinepoint2");
+  femalelinepoint2.textContent = getFemaleLine().epoint;
+  const femalelinepoint3 = document.querySelector("#femalelinepoint3");
+  femalelinepoint3.textContent = getFemaleLine().hpoint;
+
   // Personal purpose
   const sky = document.querySelector("#skypoint");
   sky.textContent = purposes.skypoint;
@@ -391,6 +409,22 @@ const calculatePoints = (aPoint, bPoint, cPoint) => {
     mulemotions: reduceNumber(cPoint + dpoint),
   };
 };
+
+function getFemaleLine() {
+  return {
+      gpoint: points.gpoint,
+      epoint: points.epoint,
+      hpoint: points.hpoint
+  };
+}
+
+function getMaleLine() {
+  return {
+      fpoint: points.fpoint,
+      epoint: points.epoint,
+      ipoint: points.ipoint
+  };
+}
 
 // clears inputs
 function clearInputs(firtsInput, secondInput) {

@@ -24,6 +24,8 @@
     />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.1/jspdf.umd.min.js"></script>
+
     <title>Destiny Matrix</title>
   </head>
 
@@ -62,7 +64,7 @@
             <p class="smoky-white">Hasil perhitungan personal</p>
           </div>
           <div class="output-personal-date smoky-white"></div>
-          <div class="pento">
+          <div class="pento" id="matrix-con">
             <svg viewBox="0 0 680 600" id="matrix">
               <g id="matrix-frame">
                 <rect
@@ -1189,159 +1191,118 @@
           <div class="info-txt">
             <table id="purposes">
               <tbody>
-                <tr class="smoky-white2">
+                <tr class="smoky-white2" style="margin-bottom: 1.5rem;">
                   <td colspan="4">
-                    <h3>
-                      <b>
-                        Male Generation Lines
-                      </b>
-                    </h3>
+                    <h3><b>Male Generation Lines</b></h3>
                   </td>
-                  <td width="6%"></td>
-                  <td colspan="4" >
-                    <h3>
-                      <b>
-                        Female Generation Lines
-                      </b>
-                    </h3>
+                  <td colspan="4">
+                    <h3><b>Female Generation Lines</b></h3>
                   </td>
-                </tr>
+                </tr>  
+                <!-- Row for Male and Female Generation Lines -->
                 <tr>
-                  <td colspan="4" class="table-padding">
-                    <span id="skypoint" class="base-circle">18</span>
+                  <td colspan="4" class="table-padding table-padding-top">
+                    <span id="malelinepoint1" class="base-circle">18</span>
+                    <span id="malelinepoint2" class="base-circle">18</span>
+                    <span id="malelinepoint3" class="base-circle">18</span>
                   </td>
-                  <td width="6%"></td>
-                  <td colspan="4" class="table-padding">
-                    <span id="skypoint" class="base-circle">18</span>
+                  <td colspan="4" class="table-padding table-padding-top">
+                    <span id="femalelinepoint1" class="base-circle">18</span>
+                    <span id="femalelinepoint2" class="base-circle">18</span>
+                    <span id="femalelinepoint3" class="base-circle">18</span>
                   </td>
                 </tr>
-
-
+          
+                <!-- Personal Purpose and Society Purpose Section -->
                 <tr class="smoky-white2">
                   <td colspan="4">
                     <h3><b>Personal purpose:</b></h3>
                   </td>
-                  <td width="10%"></td>
                   <td colspan="4">
-                    <h3><b>society Purpose:</b></h3>
+                    <h3><b>Society Purpose:</b></h3>
                   </td>
                 </tr>
-                <tr style="height: 5px">
-                  <td></td>
-                </tr>
                 <tr class="font-size16">
-                  <td colspan="4" class="table-padding">
-                    Keterampilan, kebiasaan, bakat, minat, hobi, gairah, dan keseimbangan antara energi maskulin dan feminin                  <td width="6%"></td>
-                  <td colspan="4" class="table-padding">
+                  <td colspan="4" class="table-padding" width="50%">
+                    Keterampilan, kebiasaan, bakat, minat, hobi, gairah, dan keseimbangan antara energi maskulin dan feminin  
+                  </td>
+                  <td colspan="4" class="table-padding" width="50%">
                     Tugas untuk genus, hasil, dan pengakuan di masyarakat
                   </td>
                 </tr>
-                <tr style="height: 5px">
-                  <td></td>
-                </tr>
-                <tr class="font-size18" style="position: relative">
-                  <td>Sky:</td>
-                  <td>
+          
+                <!-- Sky, Earth, Male and Female Points -->
+                <tr class="font-size18" >
+                  <td class="td-label">Sky:</td>
+                  <td class="point">
                     <span id="skypoint" class="base-circle">18</span>
                   </td>
-                  <td rowspan="2">
-                    <svg
-                      width="45"
-                      height="61"
-                      viewBox="0 0 45 61"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.422852 1.06299H21.6661V60.0719H0.422852"
-                        stroke="#F9F9F8"
-                        stroke-width="1.18018"
-                      />
-                      <path
-                        d="M44.68 30.5674H21.6665"
-                        stroke="#F9F9F8"
-                        stroke-width="1.18018"
-                      />
+                  <td rowspan="2" class="svg-td">
+                    <svg width="45" height="75" viewBox="0 0 45 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.422852 1.06299H21.6661V60.0719H0.422852" stroke="#F9F9F8" stroke-width="1.18018" />
+                      <path d="M44.68 30.5674H21.6665" stroke="#F9F9F8" stroke-width="1.18018" />
                     </svg>
                   </td>
-                  <td rowspan="2">
-                    <span id="perspurpose" class="base-circle">12</span>
+                  <td rowspan="2" class="point">
+                    <span id="perspurpose" class="base-circle mb-5">12</span>
                   </td>
-                  <td></td>
-                  <td>M:</td>
-                  <td>
+                  <td class="td-label">M:</td>
+                  <td class="point">
                     <span id="malepoint" class="base-circle">21</span>
                   </td>
-                  <td rowspan="2">
-                    <svg
-                      width="45"
-                      height="61"
-                      viewBox="0 0 45 61"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.422852 1.06299H21.6661V60.0719H0.422852"
-                        stroke="#F9F9F8"
-                        stroke-width="1.18018"
-                      />
-                      <path
-                        d="M44.68 30.5674H21.6665"
-                        stroke="#F9F9F8"
-                        stroke-width="1.18018"
-                      />
+                  <td rowspan="2" class="svg-td">
+                    <svg width="45" height="75" viewBox="0 0 45 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.422852 1.06299H21.6661V60.0719H0.422852" stroke="#F9F9F8" stroke-width="1.18018" />
+                      <path d="M44.68 30.5674H21.6665" stroke="#F9F9F8" stroke-width="1.18018" />
                     </svg>
                   </td>
                   <td rowspan="2">
-                    <span id="socialpurpose" class="base-circle">6</span>
+                    <span id="socialpurpose" class="base-circle mb-5">6</span>
                   </td>
                 </tr>
                 <tr class="font-size18">
-                  <td>Earth:</td>
-                  <td><span id="earthpoint" class="base-circle">21</span></td>
-                  <td></td>
-                  <td>F:</td>
-                  <td><span id="femalepoint" class="base-circle">12</span></td>
+                  <td class="td-label">Earth:</td>
+                  <td class="point table-padding-top pb-7">
+                    <span id="earthpoint" class="base-circle">21</span>
+                  </td>
+                  <td class="td-label">F:</td>
+                  <td class="point table-padding-top pb-7">
+                    <span id="femalepoint" class="base-circle">12</span>
+                  </td>
                 </tr>
-                <tr>
-                  <td style="height: 35px"></td>
-                </tr>
+          
+                <!-- General Purpose and Planetary Purpose -->
+                <div>
+                
+                </div>
                 <tr class="smoky-white2">
                   <td colspan="4">
-                    <h3>General Purpose:</h3>
+                    <h3><b>General Purpose:</b></h3>
                   </td>
-                  <td></td>
                   <td colspan="4">
-                    <h3>Planetary purpose:</h3>
+                    <h3><b>Planetary purpose:</b></h3>
                   </td>
-                </tr>
-                <tr style="height: 5px">
-                  <td></td>
                 </tr>
                 <tr class="trade">
                   <td colspan="4" class="table-padding font-size16">
                     Jalan spiritual, apa panggilan saya di dunia ini?
                   </td>
-                  <td></td>
-                  <td colspan="4" class="table-padding">Tujuan jiwa secara global
-                  </td>
+                  <td colspan="4" class="table-padding">Tujuan jiwa secara global</td>
                 </tr>
-                <tr>
-                  <td colspan="9" style="height: 10px"></td>
-                </tr>
+          
+                <!-- Purpose Points -->
                 <tr class="font-size18">
-                  <td colspan="4" id="blom" style="text-align: right">
+                  <td colspan="4" id="blom" style="text-align: center">
                     <span id="generalpurpose" class="base-circle">12</span>
                   </td>
-                  <td></td>
-                  <td colspan="4" id="blom2" style="text-align: right">
+                  <td colspan="4" id="blom2" style="text-align: center">
                     <span id="planetarypurpose" class="base-circle">15</span>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
-
+          
           <div id="accordion-collapse" data-accordion="collapse" class="w-full max-w-4xl mx-auto mt-6">
             <!-- Accordion Item 1 -->
             <h2 id="accordion-collapse-heading-1">
@@ -1424,13 +1385,15 @@
           </div>
           
 
-          <div class="center center_container">
+          <div class="center center_container flex flex-col mb-14">
             <div class="glow-btn__wrap">
               <div class="glow-btn"></div>
             </div>
             <button id="decode-matrix-btn">
               Bingung bacanya gimana?
             </button>
+
+            <button id="download-btn">Download PDF</button>
           </div>
         </div>
       </div>
@@ -1439,5 +1402,47 @@
     <script src="./src/code.js"></script>
     <script src="./src/script_person.js"></script>
     <script src="./src/style.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const { jsPDF } = window.jspdf;
+
+        function downloadPDF() {
+          const doc = new jsPDF();
+
+          const chakraTable = document.getElementById('chakra_table');
+          const matrixSVG = document.getElementById('matrix');
+
+          // Add title to PDF
+          doc.setFontSize(20);
+          doc.text("Personal Calculation", 14, 20);
+
+          // Add subtitle to PDF
+          doc.setFontSize(14);
+          doc.text("Health Card", 14, 30);
+
+          // Convert the table to PDF
+          doc.html(chakraTable, {
+            margin: [40, 20, 20, 20], // top, left, bottom, right margins
+            callback: function (doc) {
+              // After table is added, add SVG
+              const svgData = new XMLSerializer().serializeToString(matrixSVG);
+              const img = new Image();
+              const svgBlob = new Blob([svgData], { type: 'image/svg+xml' });
+              const url = URL.createObjectURL(svgBlob);
+
+              img.onload = function () {
+                doc.addImage(img, 'SVG', 14, doc.lastAutoTable.finalY + 10, 100, 100); // Add image below table
+                doc.save('Destiny_Matrix.pdf'); // Save the PDF
+              };
+
+              img.src = url;
+            },
+          });
+        }
+
+        document.getElementById('download-btn').addEventListener('click', downloadPDF);
+      });
+    </script>
   </body>
 </html>
