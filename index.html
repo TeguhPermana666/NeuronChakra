@@ -20,18 +20,13 @@
 <body
   class="relative min-h-screen font-[Inter] text-white bg-gradient-to-br from-[#0b0c2a] via-[#1e1b4b] to-[#000814] overflow-x-hidden">
 
-  <!-- 🌫️ BACKGROUND MIST + COSMIC PARTICLES -->
   <div class="absolute inset-0 -z-10 overflow-hidden">
-    <!-- Glow Circle Animation -->
     <div
       class="absolute top-0 left-0 w-[200%] h-[200%] bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.05),transparent_60%)] animate-spin-slow blur-3xl opacity-30">
     </div>
-
-    <!-- Star Noise Texture -->
     <div class="absolute top-0 left-0 w-full h-full bg-stars opacity-10 mix-blend-screen"></div>
   </div>
 
-  <!-- 💫 (Optional) Fog Layer -->
   <div class="absolute inset-0 fog -z-20"></div>
 
   <main class="max-w-8xl mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-14">
@@ -59,19 +54,16 @@
             class="bg-gradient-to-br from-[#1e1b3a] via-[#0b0c2a] to-[#14121f] p-6 sm:p-8 rounded-2xl shadow-2xl backdrop-blur-md border border-indigo-800/40">
             <div class="space-y-6 max-w-xl mx-auto">
 
-              <!-- Input Nama -->
               <div>
                 <input id="name" type="text" placeholder="Masukkan nama"
                   class="w-full bg-black/30 text-[#fff8db] placeholder-[#aaa] border border-[#5a4dff] rounded-xl px-4 py-3 sm:px-6 sm:py-4 text-base shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-400 transition" />
               </div>
 
-              <!-- Input Tanggal -->
               <div>
                 <input id="date" type="date"
                   class="w-full bg-black/30 text-[#fff8db] border border-[#5a4dff] rounded-xl px-4 py-3 sm:px-6 sm:py-4 text-base shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-400 transition" />
               </div>
 
-              <!-- Select Gender -->
               <div>
                 <select id="gender" name="gender"
                   class="w-full bg-black/30 text-[#fff8db] border border-[#5a4dff] rounded-xl px-4 py-3 sm:px-6 sm:py-4 text-base shadow-md focus:outline-none focus:ring-2 focus:ring-cyan-400 transition">
@@ -86,7 +78,6 @@
         </div>
       </div>
 
-      <!-- Tombol Hitung -->
       <div class="flex justify-center pt-6">
         <button id="get_the_answer"
           class="bg-gradient-to-r from-[#c084fc] to-[#38bdf8] hover:from-[#a855f7] hover:to-[#0ea5e9] text-white font-semibold px-10 py-4 rounded-2xl transition shadow-lg text-base md:text-lg">
@@ -94,10 +85,7 @@
         </button>
       </div>
 
-      <!-- Error Output -->
       <div class="text-center text-pink-500 text-sm errorOutput"></div>
-
-      <!-- Jangan ditutup di sini, bagian bawah tetap lanjut -->
 
       <div class="matrix-container px-4 sm:px-6 md:px-10">
         <div class="py-6 sm:py-8 md:py-10">
@@ -590,7 +578,6 @@
             </h2>
           </div>
 
-          <!-- Wrapper agar tabel tidak kepotong di HP -->
           <div class="w-full overflow-x-auto">
             <div class="min-w-[600px]">
               <table
@@ -669,13 +656,12 @@
               <table id="purposes" class="w-full text-base md:text-lg text-yellow-100">
                 <tbody class="divide-y divide-white/10">
 
-                  <!-- Header -->
                   <tr class="text-yellow-300 font-bold text-center tracking-wide">
                     <td colspan="4" class="py-4 text-xl font-cosmic">Male Generation Lines</td>
                     <td colspan="4" class="py-4 text-xl font-cosmic">Female Generation Lines</td>
                   </tr>
 
-                  <!-- Line Points -->
+
                   <tr>
                     <td colspan="4" class="py-3 text-center space-x-2">
                       <span id="malelinepoint1" class="point-bubble">18</span>
@@ -689,7 +675,6 @@
                     </td>
                   </tr>
 
-                  <!-- Personal & Society Purpose -->
                   <tr class="text-yellow-300 font-bold text-center">
                     <td colspan="4" class="py-4 text-lg">Personal Purpose</td>
                     <td colspan="4" class="py-4 text-lg">Society Purpose</td>
@@ -701,7 +686,6 @@
                     <td colspan="4" class="px-4 py-3">Tugas untuk genus, hasil, dan pengakuan di masyarakat</td>
                   </tr>
 
-                  <!-- Matrix -->
                   <tr class="text-center font-semibold text-yellow-100">
                     <td class="py-3">Sky:</td>
                     <td><span id="skypoint" class="point-bubble text-cyan-300">18</span></td>
@@ -730,7 +714,6 @@
                     <td><span id="femalepoint" class="point-bubble text-cyan-300">12</span></td>
                   </tr>
 
-                  <!-- General Purpose -->
                   <tr class="text-yellow-300 font-bold text-center">
                     <td colspan="4" class="py-4 text-lg">General Purpose</td>
                     <td colspan="4" class="py-4 text-lg">Planetary Purpose</td>
@@ -756,16 +739,8 @@
           </div>
         </div>
 
-
-
-
-        <!-- Wrapper biar gak kepotong -->
         <div class="w-full max-w-full px-4 sm:px-6 md:px-0">
-
-          <!-- Accordion -->
           <div id="accordion-collapse" data-accordion="collapse" class="w-full max-w-4xl mx-auto mt-12 space-y-4">
-
-            <!-- Accordion Item 1 -->
             <div
               class="rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-[#0b0c2a] via-[#1e1b4b] to-[#1e293b] border border-white/10 backdrop-blur-md">
               <h2>
@@ -787,8 +762,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Accordion Item 2 -->
             <div
               class="rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-[#0b0c2a] via-[#1e1b4b] to-[#1e293b] border border-white/10 backdrop-blur-md">
               <h2>
@@ -810,8 +783,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Accordion Item 3 -->
             <div
               class="rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-[#0b0c2a] via-[#1e1b4b] to-[#1e293b] border border-white/10 backdrop-blur-md">
               <h2>
@@ -833,8 +804,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Accordion Item 4 -->
             <div
               class="rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-[#0b0c2a] via-[#1e1b4b] to-[#1e293b] border border-white/10 backdrop-blur-md">
               <h2>
@@ -855,8 +824,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Accordion Item 5 -->
             <div
               class="rounded-2xl shadow-xl overflow-hidden bg-gradient-to-br from-[#0b0c2a] via-[#1e1b4b] to-[#1e293b] border border-white/10 backdrop-blur-md">
               <h2>
@@ -878,11 +845,7 @@
               </div>
             </div>
           </div>
-
-          <!-- Tombol -->
           <div class="flex flex-col items-center gap-6 mt-12 mb-16">
-
-            <!-- Tombol Bantuan -->
             <div class="relative group">
               <div class="absolute inset-0 bg-gradient-to-br from-cyan-500 via-fuchsia-500 to-purple-600 
                   opacity-20 blur-xl rounded-full animate-pulse group-hover:opacity-30 transition"></div>
@@ -893,8 +856,6 @@
                 ✨ Bingung bacanya gimana?
               </button>
             </div>
-
-            <!-- Tombol Download -->
             <button id="download-btn"
               class="px-8 py-4 rounded-full text-lg font-semibold font-cosmic tracking-wide text-cyan-100 
              bg-[#1e1b4b] border border-white/20 backdrop-blur-md shadow-[0_0_12px_rgba(255,255,255,0.08)] 
