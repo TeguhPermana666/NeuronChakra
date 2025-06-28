@@ -188,22 +188,11 @@ label {
 }
 
 select {
-  padding: 1rem 4.5rem;
-  font-size: 1.1rem;
-  background-color: #050215;
-  color: #fff8db;
-  border: 1px #fff8db solid;
-  border-radius: 0.5em;
+  @apply px-18 py-4 text-[1.1rem] bg-[#050215] text-[#fff8db] border border-[#fff8db] rounded-md;
 }
 
-input{
-  padding: 1.25em 3.25em 1.25em 3.25em;
-  /* font-family: "Didact Gothic"; */
-  font-size: 1.25em;
-  background-color: #050215;
-  color: #fff8db;
-  border: 1px #fff8db solid;
-  border-radius: 0.5em;
+input {
+  @apply px-13 py-5 text-[1.25rem] bg-[#050215] text-[#fff8db] border border-[#fff8db] rounded-md;
 }
 
 ::-webkit-calendar-picker-indicator {
